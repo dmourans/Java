@@ -5,6 +5,7 @@ public class Principal {
 
         System.out.println("Oi Mundo!");
         System.out.println("2");
+        System.out.println("3");
 
     }
 }
