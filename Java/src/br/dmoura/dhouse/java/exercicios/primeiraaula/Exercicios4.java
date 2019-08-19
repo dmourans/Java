@@ -20,5 +20,7 @@ public class Exercicios4 {
             total = total + numeros.get(i);
         }
         System.out.println("A soma dos elementos é:" + total);
+
+        //Teste
     }
 }
