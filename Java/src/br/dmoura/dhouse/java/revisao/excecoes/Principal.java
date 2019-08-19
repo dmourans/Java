@@ -12,7 +12,7 @@ public class Principal {
             lista.add("Gato");
             lista.add("Tenis");
 
-            System.out.println(lista.get(3));
+            System.out.println(lista.get(2));
 
         }catch (Exception e){
             System.out.println("Ocorreu um erro :: " + e.getMessage());
