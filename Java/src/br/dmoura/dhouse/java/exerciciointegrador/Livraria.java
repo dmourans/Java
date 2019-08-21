@@ -18,7 +18,7 @@ public class Livraria {
         for (int i = 0; i < livros.size(); i++) {
             if (livros.get(i).getCodigo() == codigo) {
                 achou = true;
-                System.out.println(livros.get(i).toString());
+                //System.out.println(livros.get(i).toString());
                 livroAchado = livros.get(i);
             }
         }
@@ -36,7 +36,7 @@ public class Livraria {
             for (int co = 0; co < codigos.size(); co++) {
                 if (livros.get(li).getCodigo() == codigos.get(co)) {
                     achou = true;
-                    System.out.println(livros.get(li).toString());
+                    //System.out.println(livros.get(li).toString());
                 }
             }
         }
@@ -49,15 +49,22 @@ public class Livraria {
         Livro livro = ConsultarLivro(codigo);
 
         if (livro != null && livro.getQuantidade() > 0) {
-            System.out.println("Quantidade anterior: " + livro.getQuantidade());
+            //System.out.println("Quantidade anterior: " + livro.getQuantidade());
             livro.setQuantidade(livro.getQuantidade() - 1);
-            System.out.println("Quantidade atual: " + livro.getQuantidade());
+            //System.out.println("Quantidade atual: " + livro.getQuantidade());
         } else {
             System.out.println("Estoque esgotado.");
         }
 
     }
 
+    public void EfetuarVenda(Colecao colecao) {
+        List<Livro> livros = colecao.getListaColecao();
+        for (int i = 0; i < livros.size(); i++) {
+            EfetuarVenda(livros.get(i).getCodigo());
+            System.out.println("Coleção: " + colecao.getDescricao() + " venda do livro: " + livros.get(i).getCodigo() + " - estoque: " +  livros.get(i).getQuantidade());
+        }
 
+    }
 
 }
