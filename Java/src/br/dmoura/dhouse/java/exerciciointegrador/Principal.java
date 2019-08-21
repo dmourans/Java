@@ -19,20 +19,21 @@ public class Principal {
         livraria.CadastrarLivro(livro4);
         livraria.CadastrarLivro(livro5);
 
-        //um livro
+        //Somente um livro
         //livraria.ConsultarLivro(5);
 
-        //varios livros
+        //Varios livros
         List<Integer> codigos = new ArrayList<>();
         codigos.add(2);
         codigos.add(4);
         //livraria.ConsultarLivro(codigos);
 
-//        livraria.EfetuarVenda(2);
-//        livraria.EfetuarVenda(2);
-//        livraria.EfetuarVenda(77);
+        //Vender uma unidade do livro
+        //livraria.EfetuarVenda(2);
+        //livraria.EfetuarVenda(2);
+        //livraria.EfetuarVenda(77);
 
-        //Desafio
+        //Criando coleções
         List<Livro> colecao1 = new ArrayList<>();
         colecao1.add(livro1);
         colecao1.add(livro2);
@@ -48,6 +49,7 @@ public class Principal {
         colecao3.add(livro1);
         Colecao box3 = new Colecao(colecao3, 12, 90.0,"Esse é um box 3.");
 
+        //Efetuando a venda de uma coleção
         livraria.EfetuarVenda(box1);
         livraria.EfetuarVenda(box2);
         livraria.EfetuarVenda(box3);
