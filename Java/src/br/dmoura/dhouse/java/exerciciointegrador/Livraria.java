@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Livraria {
-    //Lista de Libros
+    //Lista de Livros
     private List<Livro> livros = new ArrayList<>();
 
     public void CadastrarLivro(Livro livro) {
