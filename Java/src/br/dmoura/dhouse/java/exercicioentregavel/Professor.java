@@ -1,6 +1,6 @@
 package br.dmoura.dhouse.java.exercicioentregavel;
 
-public class Professor {
+public abstract class Professor {
 
     private String nome;
     private String sobreNome;
