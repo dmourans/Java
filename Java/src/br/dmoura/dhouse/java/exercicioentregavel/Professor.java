@@ -1,4 +1,4 @@
-package br.dmoura.dhouse.java.exercicioentregavel.parteC;
+package br.dmoura.dhouse.java.exercicioentregavel;
 
 public class Professor {
 

@@ -1,4 +1,4 @@
-package br.dmoura.dhouse.java.exercicioentregavel.parteB;
+package br.dmoura.dhouse.java.exercicioentregavel;
 
 public class Curso {
     private String nome;
