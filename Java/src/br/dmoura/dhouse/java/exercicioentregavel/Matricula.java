@@ -14,8 +14,4 @@ public class Matricula {
         this.date = new Date();
     }
 
-    public void consultarCursos(){
-
-    }
-
 }
