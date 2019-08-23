@@ -43,7 +43,7 @@ public class Aluno {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Aluno aluno = (Aluno) o;
-        return codigo.equals(aluno.codigo);
+        return Objects.equals(codigo, aluno.codigo);
     }
 
 }

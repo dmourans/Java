@@ -1,5 +1,7 @@
 package br.dmoura.dhouse.java.exercicioentregavel;
 
+import java.util.Objects;
+
 public abstract class Professor {
 
     private String nome;
@@ -44,7 +46,7 @@ public abstract class Professor {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Professor professor = (Professor) o;
-        return codigoDeProfessor.equals(professor.codigoDeProfessor);
+        return Objects.equals(codigoDeProfessor, professor.codigoDeProfessor);
     }
 
 }
