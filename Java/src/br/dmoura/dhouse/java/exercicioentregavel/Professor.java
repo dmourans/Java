@@ -38,4 +38,13 @@ public abstract class Professor {
     public void setCodigoDeProfessor(Integer codigoDeProfessor) {
         this.codigoDeProfessor = codigoDeProfessor;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Professor professor = (Professor) o;
+        return codigoDeProfessor.equals(professor.codigoDeProfessor);
+    }
+
 }

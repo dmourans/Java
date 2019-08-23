@@ -1,5 +1,7 @@
 package br.dmoura.dhouse.java.exercicioentregavel;
 
+import java.util.Objects;
+
 public class Aluno {
 
     private String nome;
@@ -35,4 +37,13 @@ public class Aluno {
     public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return codigo.equals(aluno.codigo);
+    }
+
 }

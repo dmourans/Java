@@ -59,4 +59,14 @@ public class Curso {
     public void setCodigoDoCurso(Integer codigoDoCurso) {
         this.codigoDoCurso = codigoDoCurso;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Curso curso = (Curso) o;
+        return codigoDoCurso.equals(curso.codigoDoCurso);
+    }
+
+
 }
