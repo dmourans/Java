@@ -61,6 +61,22 @@ public class Curso {
         this.codigoDoCurso = codigoDoCurso;
     }
 
+    public boolean adicionarUmAluno(Aluno umAluno){
+        listaAlunos.add(umAluno);
+        System.out.println("O Aluno :: " + umAluno.getNome() + " foi cadastrado com sucesso");
+        return true;
+    }
+
+    public void excluirUmAluno(Integer codigoDoCurso){
+        for (int i = 0; i < listaAlunos.size(); i++) {
+            if (listaAlunos.get(i).getCodigo().equals(codigoDoCurso)){
+                listaAlunos.remove(listaAlunos.get(i));
+            } else {
+                System.out.println("Aluno não localizado.");
+            }
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
