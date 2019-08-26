@@ -13,6 +13,14 @@ public class Curso {
     private ProfessorAdjunto profAdjunto;
     List<Aluno> listaAlunos = new ArrayList<>();
 
+    public Curso(String nome, Integer codigoDoCurso, Integer qtdMaximaAlunos, ProfessorTitular profTitular, ProfessorAdjunto profAdjunto) {
+        this.nome = nome;
+        this.codigoDoCurso = codigoDoCurso;
+        this.qtdMaximaAlunos = qtdMaximaAlunos;
+        this.profTitular = profTitular;
+        this.profAdjunto = profAdjunto;
+    }
+
     public Integer getQtdMaximaAlunos() {
         return qtdMaximaAlunos;
     }
