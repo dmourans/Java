@@ -9,12 +9,6 @@ public abstract class Professor {
     private Integer tempoDeCasa;
     private Integer codigoDeProfessor;
 
-    public Professor(String nome, String sobreNome, Integer codigoDeProfessor) {
-        this.nome = nome;
-        this.sobreNome = sobreNome;
-        this.codigoDeProfessor = codigoDeProfessor;
-    }
-
     public String getNome() {
         return nome;
     }

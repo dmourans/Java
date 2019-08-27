@@ -11,15 +11,7 @@ public class Curso {
     private Integer qtdMaximaAlunos;
     private ProfessorTitular profTitular;
     private ProfessorAdjunto profAdjunto;
-    List<Aluno> listaAlunos = new ArrayList<>();
-
-    public Curso(String nome, Integer codigoDoCurso, Integer qtdMaximaAlunos, ProfessorTitular profTitular, ProfessorAdjunto profAdjunto) {
-        this.nome = nome;
-        this.codigoDoCurso = codigoDoCurso;
-        this.qtdMaximaAlunos = qtdMaximaAlunos;
-        this.profTitular = profTitular;
-        this.profAdjunto = profAdjunto;
-    }
+    private List<Aluno> listaAlunos = new ArrayList<>();
 
     public Integer getQtdMaximaAlunos() {
         return qtdMaximaAlunos;
@@ -69,20 +61,24 @@ public class Curso {
         this.codigoDoCurso = codigoDoCurso;
     }
 
-    public boolean adicionarUmAluno(Aluno umAluno){
-        listaAlunos.add(umAluno);
-        System.out.println("O Aluno :: " + umAluno.getNome() + " foi cadastrado com sucesso");
-        return true;
+    public boolean adicionarUmAluno(Aluno umAluno) {
+
+        if (qtdMaximaAlunos > listaAlunos.size()) {
+            listaAlunos.add(umAluno);
+            System.out.println("O Aluno :: " + umAluno.getNome() + " foi cadastrado com sucesso");
+            return true;
+
+        } else {
+            System.out.println("O Aluno :: " + umAluno.getNome() + " não foi cadastrado por não haver vagas disponiveis");
+            return false;
+        }
+
     }
 
-    public void excluirUmAluno(Integer codigoDoCurso){
-        for (int i = 0; i < listaAlunos.size(); i++) {
-            if (listaAlunos.get(i).getCodigo().equals(codigoDoCurso)){
-                listaAlunos.remove(listaAlunos.get(i));
-            } else {
-                System.out.println("Aluno não localizado.");
-            }
-        }
+    public void excluirUmAluno(Aluno umAluno) {
+        listaAlunos.remove(umAluno);
+        System.out.println("Aluno removido.");
+
     }
 
     @Override
