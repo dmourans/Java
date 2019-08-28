@@ -12,7 +12,6 @@ public class Matricula {
         this.aluno = aluno;
         this.curso = curso;
         this.date = new Date();
-
     }
 
 }

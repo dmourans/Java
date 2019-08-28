@@ -6,11 +6,9 @@ public class ProfessorAdjunto extends Professor {
 
     public Integer getQtdDeHrs() {
         return qtdDeHrs;
-
     }
 
     public void setQtdDeHrs(Integer qtdDeHrs) {
         this.qtdDeHrs = qtdDeHrs;
-
     }
 }

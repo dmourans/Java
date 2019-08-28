@@ -74,9 +74,10 @@ public class DigitalHouseManager {
                     + " || Com o maximo de Inscrições em :: "
                     + curso.getQtdMaximaAlunos()
                     + " || Professor Titular :: "
-                    + curso.getProfTitular().getNome()
+                    + curso.getProfTitular().getNome() + " " + curso.getProfTitular().getSobreNome()
                     + " || Professor Adjunto :: "
-                    + curso.getProfAdjunto().getNome() + " || Adicionados");
+                    + curso.getProfAdjunto().getNome() + " " + curso.getProfAdjunto().getSobreNome()
+                    + " || Adicionados");
         }
 
     }
@@ -125,10 +126,8 @@ public class DigitalHouseManager {
 
         Aluno aluno = new Aluno(nome, sobrenome, codigoAluno);
         alunos.add(aluno);
-        System.out.println("Aluno de Nome :: "
-                + aluno.getNome()
-                + " || Sobrenome :: "
-                + aluno.getSobrenome()
+        System.out.println("Aluno :: "
+                + aluno.getNome() + " " + aluno.getSobrenome()
                 + " || Com o código :: "
                 + aluno.getCodigo()
                 + " || Adicionado com sucesso.");
