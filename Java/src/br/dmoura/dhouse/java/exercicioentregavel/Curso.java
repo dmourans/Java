@@ -65,11 +65,16 @@ public class Curso {
 
         if (qtdMaximaAlunos > listaAlunos.size()) {
             listaAlunos.add(umAluno);
-            System.out.println("O Aluno :: " + umAluno.getNome() + " foi cadastrado com sucesso");
+            System.out.println("O Aluno :: " + umAluno.getNome() + " " + umAluno.getSobrenome() + " foi cadastrado com sucesso");
             return true;
 
         } else {
-            System.out.println("O Aluno :: " + umAluno.getNome() + " não foi cadastrado por não haver vagas disponiveis");
+            System.out.println("O Aluno :: "
+                    + umAluno.getNome() + " " + umAluno.getSobrenome()
+                    + " não foi cadastrado no curso por não haver vagas disponiveis. Vagas disponiveis :: "
+                    + getQtdMaximaAlunos()
+                    + " || Vagas preenchidas :: "
+                    + listaAlunos.size() );
             return false;
         }
 

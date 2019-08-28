@@ -18,7 +18,8 @@ public class DigitalHouseManager {
         curso.setNome(nome);
         curso.setQtdMaximaAlunos(qtdMaximaAlunos);
         cursos.add(curso);
-        System.out.println("Curso :: " + curso.getNome() + " || Adicionado com sucesso.");
+        System.out.println("Curso :: " + curso.getNome() + " || De codigo :: "
+                + curso.getCodigoDoCurso() + " || Com a Quantidade Maxima de Alunos :: " + curso.getQtdMaximaAlunos() + " || Adicionado");
     }
 
     public void excluirCurso(Integer codigoDoCurso) {
@@ -68,8 +69,12 @@ public class DigitalHouseManager {
             curso.setProfTitular(professorTitular);
             curso.setProfAdjunto(professorAdjunto);
             System.out.println("Curso :: " + curso.getNome()
+                    + " || De codigo :: "
+                    + curso.getCodigoDoCurso()
+                    + " || Com o maximo de Inscrições em :: "
+                    + curso.getQtdMaximaAlunos()
                     + " || Professor Titular :: "
-                    + curso.getProfTitular().getEspecialidade()
+                    + curso.getProfTitular().getNome()
                     + " || Professor Adjunto :: "
                     + curso.getProfAdjunto().getNome() + " || Adicionados");
         }
@@ -120,7 +125,13 @@ public class DigitalHouseManager {
 
         Aluno aluno = new Aluno(nome, sobrenome, codigoAluno);
         alunos.add(aluno);
-        System.out.println("Aluno :: " + aluno.getNome() + " || Adicionado com sucesso.");
+        System.out.println("Aluno de Nome :: "
+                + aluno.getNome()
+                + " || Sobrenome :: "
+                + aluno.getSobrenome()
+                + " || Com o código :: "
+                + aluno.getCodigo()
+                + " || Adicionado com sucesso.");
     }
 
     public void excluirProfessor(Integer codigoProfessor) {
@@ -149,8 +160,9 @@ public class DigitalHouseManager {
 
         professores.add(professorTitular);
 
-        System.out.println("Professor Titular :: " + professorTitular.getNome() + " || Adicionado");
-
+        System.out.println("Professor Titular :: "
+                + professorTitular.getNome() + " " + professorTitular.getSobreNome() + " :: "
+                + " || Especialidade :: " + professorTitular.getEspecialidade() + " || Adicionado");
     }
 
     public void registrarProfessorAdjunto(String nome, String sobrenome, Integer codigoProfessor, Integer qtdHoras) {
@@ -164,7 +176,9 @@ public class DigitalHouseManager {
 
         professores.add(professorAdjunto);
 
-        System.out.println("Professor Adjunto :: " + professorAdjunto.getNome() + " || Adicionado");
+        System.out.println("Professor Adjunto :: "
+                + professorAdjunto.getNome() + " " + professorAdjunto.getSobreNome() + " :: "
+                + " || Quantidade de horas :: " + professorAdjunto.getQtdDeHrs() + " || Adicionado");
 
     }
 

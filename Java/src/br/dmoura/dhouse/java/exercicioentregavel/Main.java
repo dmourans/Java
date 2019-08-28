@@ -6,10 +6,10 @@ public class Main {
 
         DigitalHouseManager digitalHouseManager = new DigitalHouseManager();
         //Dois Professores Titulares e Adjuntos
-        digitalHouseManager.registrarProfessorTitular("Nina", "Lofrese",1,"java");
-        digitalHouseManager.registrarProfessorTitular("Luiz", "Santos", 2, "C#");
-        digitalHouseManager.registrarProfessorAdjunto("Augusto", "Jesus", 3,10);
-        digitalHouseManager.registrarProfessorAdjunto("Rosangela", "Banba", 4, 20);
+        digitalHouseManager.registrarProfessorTitular("Nina", "Lofrese",1,"Java");
+        digitalHouseManager.registrarProfessorTitular("Luiz", "Dias", 2, "C#");
+        digitalHouseManager.registrarProfessorAdjunto("Ulysses", "Mourão", 3,10);
+        digitalHouseManager.registrarProfessorAdjunto("Talita", "Noccetti", 4, 20);
 
         //Dois Cursos
         digitalHouseManager.registrarCurso("Full Stack",20001,3);
@@ -20,11 +20,11 @@ public class Main {
         digitalHouseManager.alocarProfessores(20002,2,4);
 
         //Matriculando 5 Alunos
-        digitalHouseManager.matricularAluno("Sergio","Stritzel",5);
-        digitalHouseManager.matricularAluno("Gabriel", "Silva", 6);
-        digitalHouseManager.matricularAluno("Jiraya", "Santos", 7);
-        digitalHouseManager.matricularAluno("Jaspion", "Pereira", 8);
-        digitalHouseManager.matricularAluno("Goku", "Assunsão", 9);
+        digitalHouseManager.matricularAluno("Sergio","Strutzel",5);
+        digitalHouseManager.matricularAluno("Victor", "Sewaybricker", 6);
+        digitalHouseManager.matricularAluno("Nicolas", "Varzacacou", 7);
+        digitalHouseManager.matricularAluno("Andréia", "Yoshinari", 8);
+        digitalHouseManager.matricularAluno("Maíra", "Scarance", 9);
 
         //Dois alunos para Full Stack e tres para Android
         digitalHouseManager.matricularAluno(5,20001);
